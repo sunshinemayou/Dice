@@ -12,11 +12,11 @@ for i in range(1, dice+1):
 		Asking the user to input the sides of each dice
 	"""
 	sides = specialInput.int_input("How many sides on dice #{}?".format(i))
-	if sides > 0:
+	if sides <= 2:
+		print("Each die has at least two sides")
+		break
+	elif sides > 2:
 		number = random.randint(1, sides+1)
-		""" 
-			Giving the output 
-		"""
 	else:
 		"""
 			If you see this sentence, it means that you have made a mistake when inputting the side of this dice
